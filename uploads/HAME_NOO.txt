@@ -1,0 +1,7 @@
+with open("user.out", "w") as f:
+    inputs = map(loads, stdin)
+    for nums in inputs:
+        k = next(inputs)
+        print(Solution().findMaxAverage(nums,k),file=f)
+exit(0)        
+      
