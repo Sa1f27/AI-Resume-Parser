@@ -1,158 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=10.0">
-    <title>Resume Screening AI Based System</title>
-    <link rel="icon" href="best-initial-letter-r-logo-design-graphic-download-vector-35165466.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polygon Inspired Design</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
 
         body {
             font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(135deg, #00ffff, #808080);
-            background-size: 100% 100%;
-            animation: gradientAnimation 1s ease infinite;
+            background: #2d2a4a;
             color: #fff;
             margin: 0;
             padding: 0;
-            overflow-x: hidden;
-            min-height: 100vh;
+            overflow-x: auto;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
+            min-height: 100vh;
             scroll-behavior: smooth;
         }
 
-        @keyframes gradientAnimation {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
+        .section {
+            min-width: 100vw;
+            padding: 50px;
+            box-sizing: border-box;
+            flex-shrink: 0;
         }
 
-        .heading2 {
-            margin-left: 0;
-            text-align: center;
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            animation: fadeIn 2s ease-in-out;
+        .section:nth-child(odd) {
+            background: #3a3768;
+        }
+
+        .section:nth-child(even) {
+            background: #454275;
         }
 
         .heading1 {
             font-family: 'Play', sans-serif;
             font-size: 4rem;
             font-weight: 700;
-            margin-top: 90px;
-            margin-bottom: -90px;
-            margin: 0 auto;
-            padding: 2rem;
-            color: #fff;
+            color: #50fa7b;
             text-align: center;
-            background: linear-gradient(to right, #ff5858, #f857a6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: neon 1.5s ease-in-out infinite alternate;
+            margin: 0;
         }
 
-        @keyframes neon {
-            from {
-                text-shadow: 0 0 5px #fff, 0 0 15px #fff, 0 0 20px #00ffcc;
-            }
-            to {
-                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0099ff;
-            }
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-        .logo-container {
-            margin-left: 165px;
-            margin-top: -70px;
-            margin-bottom: -70px;
+        .heading2 {
+            font-size: 2rem;
+            text-align: center;
+            margin: 20px 0;
         }
 
         .tagline {
-            z-index: 1;
             font-size: 1.2rem;
             font-weight: 400;
-            width: 100%;
             text-align: center;
-            color: #fff;
-            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            margin-top: -90px;
-            animation: fadeIn 2.5s ease-in-out;
-
+            margin-bottom: 20px;
         }
 
         .container {
-            background: rgba(0, 10, 127, 0.5);
+            background: rgba(0, 0, 0, 0.5);
             backdrop-filter: blur(10px);
-            max-width: 1000px;
-            margin: 20px;
-            padding: 50px;
-            border-radius: 20px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+            text-align: center;
         }
 
-        @keyframes slideIn {
-            from {
-                transform: translateY(50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        .container p {
-            margin: 0 0 20px 0;
+        input[type="file"],
+        input[type="text"],
+        input[type="email"],
+        input[type="submit"],
+        button {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px auto;
+            border: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
             display: block;
-            line-height: 1.6;
             text-align: center;
-        }
-
-        h2 {
-            color: #fff;
-            text-align: center;
-            margin-bottom: 20px;
-            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            animation: fadeIn 2s ease-in-out;
         }
 
         input[type="file"],
         input[type="text"],
         input[type="email"] {
-            width: calc(100% - 16px);
-            padding: 10px;
-            margin: 8px 0;
-            border: none;
-            border-radius: 5px;
-            background-color: rgba(192, 192, 192, 0.7);
-            color: white;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #fff;
         }
 
         input[type="file"]::placeholder,
         input[type="text"]::placeholder,
         input[type="email"]::placeholder {
-            color: #ddd;
+            color: #bbb;
         }
 
         input[type="file"]:focus,
@@ -162,24 +106,20 @@
             outline: none;
         }
 
-        input[type="submit"] {
-            background: linear-gradient(to right, #00ffcc, #0099ff);
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            border-radius: 5px;
+        input[type="submit"],
+        button {
+            background: linear-gradient(to right, #50fa7b, #8be9fd);
+            color: #2d2a4a;
             cursor: pointer;
-            display: block;
-            margin: 20px auto;
             text-transform: uppercase;
             letter-spacing: 0.1rem;
             font-weight: 600;
-            transition: all 0.1s ease;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
 
-        input[type="submit"]:hover {
-            background: linear-gradient(to left, #00ffcc, #0099ff);
+        input[type="submit"]:hover,
+        button:hover {
+            background: linear-gradient(to left, #50fa7b, #8be9fd);
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
             transform: scale(1.05);
         }
@@ -192,107 +132,24 @@
             display: block;
             margin-bottom: 5px;
             font-weight: bold;
-            text-align: left;
             color: #fff;
-            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        }
-
-        .form-container {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .form-container .left-column,
-        .form-container .right-column {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .upload {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            width: 100%;
-        }
-
-        .generate {
-            text-align: center;
-        }
-
-        .divider {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 20px 0;
-            margin-right: -30px;
-            margin-left: -30px;
-        }
-
-        .divider hr {
-            flex: 1;
-            border: none;
-            border-top: 1px solid rgba(255, 255, 255, 0.5);
-            margin: 0 10px;
-            box-shadow: 0 0 5px rgba(0, 255, 255, 0.5), 0 0 10px rgba(0, 255, 255, 0.5);
-        }
-
-        .divider span {
-            color: white;
-            font-weight: bold;
-            text-shadow: 0 0 5px rgba(0, 255, 255, 0.5), 0 0 10px rgba(0, 255, 255, 0.5);
         }
 
         a {
-            color: #00ffcc;
+            color: #50fa7b;
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
         a:hover {
-            color: #0099ff;
+            color: #8be9fd;
         }
-
-        button {
-            background: linear-gradient(to right, #ff5858, #f857a6);
-            border: none;
-            color: #fff;
-            padding: 12px 24px;
-            border-radius: 5px;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 0.1rem;
-            font-weight: 600;
-            transition: all 0.s ease;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
-
-        button:hover {
-            background: linear-gradient(to left, #ff5858, #f857a6);
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-            transform: scale(1.05);
-        }
-
-
-
     </style>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Marcellus&display=swap"
-          rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap"
-          rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 <div class="container">
-    <div class="logo-container">
-        <img src="static/ins1.png" alt="AI-Resume Insight" width="300" height="240">
-    </div>
+
     <div class="holder">
         <p class="heading1">AI-Resume Insight</p>
         <p class="tagline">"Insightful Suggestions, Personalized for Your Career Path"</p>
@@ -364,14 +221,14 @@
     <div id="results"></div>
 
     <h2>Generative AI</h2>
-<form id="generateForm" action="/generate" method="post">
-    <label for="prompt">Enter a prompt:</label>
-    <input type="text" id="prompt" name="prompt" required>
-    <input type="submit" value="Generate Response">
-</form>
+    <form id="generateForm" action="/generate" method="post">
+        <label for="prompt">Enter a prompt:</label>
+        <input type="text" id="prompt" name="prompt" required>
+        <input type="submit" value="Generate Response">
+    </form>
 
-<h2>Generated Response</h2>
-<p id="response">{{response}}</p>
+    <h2>Generated Response</h2>
+    <p id="response">{{response}}</p>
 
 </div>
 <script>
