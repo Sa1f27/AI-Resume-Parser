@@ -156,7 +156,7 @@ def upload_file():
         prompt = f" i am proficient in Skills: {', '.join(extracted_skills)}\n" \
                  f"and i want to become {', '.join(extracted_job_roles)}\n" \
                  f"What additional skills, languages, or courses could I learn to improve in this field?" \
-                 f"Keep your response under 200 words and dont use bold font"
+                 f"Keep your response under 200 words"
 
 
         suggestion = generate_suggestions(prompt)
