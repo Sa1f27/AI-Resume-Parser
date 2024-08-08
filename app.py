@@ -38,7 +38,7 @@ def extract_name(resume_text):
 def extract_contact_number_from_resume(text):
     contact_number = None
 
-    # Use regex pattern to find a potential contact number
+    # Use regex pattern to find a potential number
     pattern = r"\b(?:\+?\d{1,3}[-.\s]?)?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}\b"
     match = re.search(pattern, text)
     if match:
