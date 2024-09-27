@@ -8,7 +8,7 @@ from fpdf import FPDF
 import google.generativeai as genai
 
 genai.configure(api_key="Replace_with_your_key")
-model = genai.GenerativeModel('gemini-1.5-pro')
+model = genai.GenerativeModel('gemini-1.5-flash')
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['STATIC_FOLDER'] = 'static'
