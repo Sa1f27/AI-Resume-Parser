@@ -13,8 +13,8 @@ This Flask-based application processes resumes to extract useful information (li
 
 1. Clone the repository:
     ```
-    git clone <your_repo_url>
-    cd <repo_folder>
+    git clone https://github.com/Sa1f27/AI-Resume-Parser.git
+    cd AI-Resume-Parser
     ```
 
 2. Install dependencies:
